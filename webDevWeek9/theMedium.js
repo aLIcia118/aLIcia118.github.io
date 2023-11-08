@@ -26,6 +26,8 @@ function makeList() {
     theDivider.appendChild(theItem);
     theItem.appendChild(theTxt);
     theInput.value = '';
+
+    theInput.focus();
     
 }
 
