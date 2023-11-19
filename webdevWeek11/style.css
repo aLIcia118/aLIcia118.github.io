@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: cursive;
+    overflow: hidden;
+  }
+  
+  h1 {
+    font-size: 80px;
+    margin-bottom: 20px; 
+  }
+  
+  #generateBtn {
+    font-family:cursive;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(255, 175, 226);
+    border: none;
+    border-radius: 50% 50% 50% 50%;
+    position: relative;
+  }
+  
+  #randomDogName {
+    margin-top: 0px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  h2{
+    margin-top:40px;
+    font-size: 32px;
+  }
+
+
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background-image: url('https://gifdb.com/images/high/cute-kawaii-cartoon-dog-blushing-ls92877b40u79321.gif');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+  }
+
+  
