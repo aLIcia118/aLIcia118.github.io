@@ -14,13 +14,16 @@ h1 {
 
 .image-container {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
+  flex-direction: column;
   align-items: center;
   margin-top: 20px;
 }
 
 .button-container {
-  margin-bottom: 10px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .generate-button {
@@ -29,7 +32,7 @@ h1 {
   border: none;
   border-radius: 50%;
   padding: 15px;
-  margin-bottom: 10px; /* Adjust space between buttons */
+  margin-bottom: 10px;
   cursor: pointer;
 }
 
