@@ -1,11 +1,30 @@
 body {
   margin: 0; /* Remove default margin */
   background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
 }
 
 .image-container {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Adjust as needed */
+}
+
+.generate-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  margin-right: 10px; /* Space between the button and content */
+  cursor: pointer;
+}
+
+.content-container {
   text-align: center;
-  margin-top: 20px;
 }
 
 img {
@@ -21,19 +40,4 @@ img {
 
 .caption {
   text-align: center;
-}
-
-.generate-container {
-  display: flex;
-  align-items: center;
-}
-
-.generate-button {
-  background-color: #3498db; /* Change the button color as needed */
-  color: #fff;
-  border: none;
-  border-radius: 50%; /* Make the button a circle */
-  padding: 15px; /* Adjust the padding as needed */
-  margin-right: 20px; /* Space between the button and image */
-  cursor: pointer;
 }
