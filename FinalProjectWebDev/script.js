@@ -1,4 +1,4 @@
-let activeButton = ''; // Variable to track the active button
+let activeButton = ''; 
 
 function setActiveButton(buttonId) {
   activeButton = buttonId;
@@ -29,7 +29,6 @@ function generateRandomImage() {
     .catch(error => console.error('Error fetching data:', error));
 }
 
-// Function to generate a random number between 0 and max (exclusive)
 function getRandomNumber(max) {
   return Math.floor(Math.random() * max);
 }
