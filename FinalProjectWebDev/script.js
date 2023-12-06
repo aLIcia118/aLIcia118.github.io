@@ -5,7 +5,7 @@ function getRandomNumber(max) {
 
 // Function to load random image and caption from the JSON file
 function generateRandomImage() {
-  fetch('images.json') // Update the filename if necessary
+  fetch('images.json')
     .then(response => response.json())
     .then(data => {
       const randomIndex = getRandomNumber(data.length);
@@ -16,3 +16,8 @@ function generateRandomImage() {
     })
     .catch(error => console.error('Error fetching data:', error));
 }
+
+// Initial generation when the page loads
+document.addEventListener('DOMContentLoaded', function () {
+  generateRandomImage();
+});
