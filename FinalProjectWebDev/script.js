@@ -10,21 +10,23 @@ function generateRandomMarine() {
       const randomIndex = getRandomNumber(data.length);
       const randomImage = data[randomIndex];
 
-      document.getElementById('random-image').src = randomImage.image;
-      document.getElementById('caption').textContent = randomImage.caption;
+      // Update the marine image container
+      document.getElementById('random-image-marine').src = randomImage.image;
+      document.getElementById('caption-marine').textContent = randomImage.caption;
     })
     .catch(error => console.error('Error fetching data:', error));
 }
 
 function generateRandomAnimal() {
-  fetch('SonnyAngels/Animal.json')
+  fetch('Animal.json')
     .then(response => response.json())
     .then(data => {
       const randomIndex = getRandomNumber(data.length);
       const randomImage = data[randomIndex];
 
-      document.getElementById('random-image').src = randomImage.image;
-      document.getElementById('caption').textContent = randomImage.caption;
+      // Update the animal image container
+      document.getElementById('random-image-animal').src = randomImage.image;
+      document.getElementById('caption-animal').textContent = randomImage.caption;
     })
     .catch(error => console.error('Error fetching data:', error));
 }
