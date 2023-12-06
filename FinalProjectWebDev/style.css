@@ -1,0 +1,33 @@
+#image-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  #random-image {
+    display: block;
+    margin: 0 auto; /* Center the image */
+  }
+  
+  #caption {
+    text-align: center;
+  }
+  
+  #generate-button {
+    background-color: #3498db; /* Change the button color as needed */
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Make the button a circle */
+    padding: 15px; /* Adjust the padding as needed */
+    margin-left: 20px; /* Space between the button and image */
+    cursor: pointer;
+  }
+  
+  body{
+    background-color: pink;
+  }
