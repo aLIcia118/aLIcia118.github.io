@@ -14,8 +14,13 @@ h1 {
 
 .image-container {
   display: flex;
+  flex-direction: column; /* Stack elements vertically */
   align-items: center;
   margin-top: 20px;
+}
+
+.button-container {
+  margin-bottom: 10px; /* Adjust as needed */
 }
 
 .generate-button {
@@ -24,7 +29,7 @@ h1 {
   border: none;
   border-radius: 50%;
   padding: 15px;
-  margin-right: 10px;
+  margin-bottom: 10px; /* Adjust space between buttons */
   cursor: pointer;
 }
 
@@ -46,4 +51,3 @@ img {
 .caption {
   text-align: center;
 }
- 
