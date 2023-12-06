@@ -8,11 +8,16 @@
 </head>
 <body>
   <div id="generate-container">
-    <button id="generate-button" onclick="generateRandomImage('images.json')">Generate Random Image 1</button>
-    <button id="generate-button-2" onclick="generateRandomImage('Animal.json')">Generate Random Image 2</button>
-    <div id="image-container">
-      <img id="random-image" alt="Random Image">
-      <p id="caption"></p>
+    <button id="generate-button" onclick="generateRandomImage('images.json', 'container-1')">Generate Random Image 1</button>
+    <div id="container-1" class="image-container">
+      <img id="random-image-1" alt="Random Image">
+      <p id="caption-1"></p>
+    </div>
+
+    <button id="generate-button-2" onclick="generateRandomImage('images2.json', 'container-2')">Generate Random Image 2</button>
+    <div id="container-2" class="image-container">
+      <img id="random-image-2" alt="Random Image">
+      <p id="caption-2"></p>
     </div>
   </div>
 
