@@ -22,7 +22,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20px; /* Adjust as needed */
+  margin-right: 20px; 
 }
 
 .generate-button {
@@ -42,7 +42,7 @@ h1 {
 img {
   max-width: 100%;
   height: auto;
-  margin-left: 20px; /* Adjust as needed */
+  margin-left: 20px; 
 }
 
 .random-image {
