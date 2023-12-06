@@ -4,6 +4,7 @@ function getRandomNumber(max) {
 }
 
 function generateRandomMarine() {
+  console.log('Generating random Marine image...');
   fetch('images.json')
     .then(response => response.json())
     .then(data => {
@@ -18,6 +19,7 @@ function generateRandomMarine() {
 }
 
 function generateRandomAnimal() {
+  console.log('Generating random Animal image...');
   fetch('Animal.json')
     .then(response => response.json())
     .then(data => {
