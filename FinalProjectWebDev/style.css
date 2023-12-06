@@ -4,7 +4,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center; /* Center both horizontally and vertically */
   height: 100vh;
 }
 
@@ -14,16 +14,15 @@ h1 {
 
 .image-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   margin-top: 20px;
 }
 
 .button-container {
   display: flex;
-  flex-direction: column; /* Stack buttons vertically */
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
+  margin-right: 20px; /* Adjust as needed */
 }
 
 .generate-button {
@@ -43,14 +42,16 @@ h1 {
 img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
+  margin-left: 20px; /* Adjust as needed */
 }
 
 .random-image {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto; /* Center the image horizontally */
 }
 
 .caption {
   text-align: center;
+  font-size: medium;
+
 }
