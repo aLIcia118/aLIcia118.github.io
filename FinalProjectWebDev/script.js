@@ -3,22 +3,15 @@ function getRandomNumber(max) {
   return Math.floor(Math.random() * max);
 }
 
-// Function to load random image and caption from the JSON file
 function generateRandomMarine() {
-  fetch('SonnyAngels/Marine.json')
+  fetch('images.json')
     .then(response => response.json())
     .then(data => {
       const randomIndex = getRandomNumber(data.length);
       const randomImage = data[randomIndex];
 
-      // Target the specific elements for the Marine section
-      const imageContainer = document.getElementById('image-container-marine');
-      const randomImageElement = imageContainer.querySelector('.random-image');
-      const captionElement = imageContainer.querySelector('.caption');
-
-      // Set the new image and caption
-      randomImageElement.src = randomImage.image;
-      captionElement.textContent = randomImage.caption;
+      document.getElementById('random-image').src = randomImage.image;
+      document.getElementById('caption').textContent = randomImage.caption;
     })
     .catch(error => console.error('Error fetching data:', error));
 }
@@ -30,17 +23,12 @@ function generateRandomAnimal() {
       const randomIndex = getRandomNumber(data.length);
       const randomImage = data[randomIndex];
 
-      // Target the specific elements for the Animal section
-      const imageContainer = document.getElementById('image-container-animal');
-      const randomImageElement = imageContainer.querySelector('.random-image');
-      const captionElement = imageContainer.querySelector('.caption');
-
-      // Set the new image and caption
-      randomImageElement.src = randomImage.image;
-      captionElement.textContent = randomImage.caption;
+      document.getElementById('random-image').src = randomImage.image;
+      document.getElementById('caption').textContent = randomImage.caption;
     })
     .catch(error => console.error('Error fetching data:', error));
 }
+
 
 // Initial generation when the page loads
 document.addEventListener('DOMContentLoaded', function () {
