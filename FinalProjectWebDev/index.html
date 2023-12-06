@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="image-container">
-    <button id="generate-button" onclick="generateRandomImage()">Generate Random Image</button>
-    <img id="random-image" alt="Random Image">
-    <p id="caption"></p>
+  <div id="generate-container">
+    <button id="generate-button" onclick="generateRandomImage('images.json')">Generate Random Image 1</button>
+    <button id="generate-button-2" onclick="generateRandomImage('Animal.json')">Generate Random Image 2</button>
+    <div id="image-container">
+      <img id="random-image" alt="Random Image">
+      <p id="caption"></p>
+    </div>
   </div>
 
   <script src="script.js"></script>
