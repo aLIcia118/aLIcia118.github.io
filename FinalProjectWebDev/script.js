@@ -41,9 +41,3 @@ function generateRandomImage() {
     .catch(error => console.error('Error fetching data:', error));
 }
 
-// Initial generation when the page loads
-document.addEventListener('DOMContentLoaded', function () {
-  // You can generate an image from one of the sections on page load if needed
-  // generateRandomMarine();
-  // generateRandomAnimal();
-});
