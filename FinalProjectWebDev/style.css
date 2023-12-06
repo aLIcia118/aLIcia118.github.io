@@ -1,10 +1,9 @@
 body {
   margin: 0; /* Remove default margin */
   background-color: pink;
-
 }
 
-#image-container {
+.image-container {
   text-align: center;
   margin-top: 20px;
 }
@@ -15,21 +14,21 @@ img {
   margin-bottom: 10px;
 }
 
-#random-image {
+.random-image {
   display: block;
   margin: 0 auto; /* Center the image */
 }
 
-#caption {
+.caption {
   text-align: center;
 }
 
-#generate-container {
+.generate-container {
   display: flex;
   align-items: center;
 }
 
-#generate-button {
+.generate-button {
   background-color: #3498db; /* Change the button color as needed */
   color: #fff;
   border: none;
