@@ -7,19 +7,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>SonnyAngel Generator!</h1>
-  <div id="generate-container">
-    <button id="generate-button" onclick="generateRandomImage('images.json', 'container-1')">Marine</button>
-    <div id="container-1" class="image-container">
-      <img id="random-image-1" alt="Random Image">
-      <p id="caption-1"></p>
-    </div>
-
-    <button id="generate-button-2" onclick="generateRandomImage('images2.json', 'container-2')">Animal </button>
-    <div id="container-2" class="image-container">
-      <img id="random-image-2" alt="Random Image">
-      <p id="caption-2"></p>
-    </div>
+  <h1>SonnyAngel Generator</h1>
+  <div id="image-container">
+    <button id="generate-button" onclick="generateRandomMarine()">Marine</button>
+    <img id="random-image" alt="Random Image">
+    <p id="caption"></p>
+  </div>
+  <div id="image-container">
+    <button id="generate-button" onclick="generateRandomAnimal()">Animal</button>
+    <img id="random-image" alt="Random Image">
+    <p id="caption"></p>
   </div>
 
   <script src="script.js"></script>
