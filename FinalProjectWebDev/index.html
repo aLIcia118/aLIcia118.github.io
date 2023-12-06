@@ -6,19 +6,22 @@
   <title>Random Image Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<!-- ... (head remains the same) -->
 <body>
   <h1>SonnyAngel Generator</h1>
-<!-- Single Image Container -->
-<div id="image-container">
-  <button id="generate-button-marine" onclick="generateRandomMarine()">Marine</button>
-  <button id="generate-button-animal" onclick="generateRandomAnimal()">Animal</button>
-  <img id="random-image" alt="Random Image">
-  <p id="caption"></p>
-</div>
 
+  <!-- Marine Image Container -->
+  <div id="image-container-marine">
+    <button id="generate-button-marine" onclick="generateRandomMarine()">Marine</button>
+    <img id="random-image-marine" alt="Random Marine Image">
+    <p id="caption-marine"></p>
+  </div>
 
-
+  <!-- Animal Image Container -->
+  <div id="image-container-animal">
+    <button id="generate-button-animal" onclick="generateRandomAnimal()">Animal</button>
+    <img id="random-image-animal" alt="Random Animal Image">
+    <p id="caption-animal"></p>
+  </div>
 
   <script src="script.js"></script>
 </body>
