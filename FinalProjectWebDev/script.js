@@ -1,8 +1,3 @@
-// Function to generate a random number between 0 and max (exclusive)
-function getRandomNumber(max) {
-  return Math.floor(Math.random() * max);
-}
-
 let activeButton = ''; // Variable to track the active button
 
 function setActiveButton(buttonId) {
@@ -27,17 +22,14 @@ function generateRandomImage() {
       const randomIndex = getRandomNumber(data.length);
       const randomImage = data[randomIndex];
 
-      // Update the image container based on the active button
-      const imageContainerId = activeButton === 'generate-button-marine' ? 'image-container-marine' : 'image-container-animal';
-      const randomImageId = activeButton === 'generate-button-marine' ? 'random-image-marine' : 'random-image-animal';
-      const captionId = activeButton === 'generate-button-marine' ? 'caption-marine' : 'caption-animal';
-
-      document.getElementById(randomImageId).src = randomImage.image;
-      document.getElementById(captionId).textContent = randomImage.caption;
-
-      // Optionally, you can reset the active button to allow switching between buttons
-      // setActiveButton('');
+      // Update the image container
+      document.getElementById('random-image').src = randomImage.image;
+      document.getElementById('caption').textContent = randomImage.caption;
     })
     .catch(error => console.error('Error fetching data:', error));
 }
 
+// Function to generate a random number between 0 and max (exclusive)
+function getRandomNumber(max) {
+  return Math.floor(Math.random() * max);
+}
