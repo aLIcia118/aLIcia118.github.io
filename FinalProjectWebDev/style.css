@@ -11,12 +11,15 @@ body {
   height: 100vh;
 }
 
-h1,h3 {
-  margin-top: 20px;
-  font-family: 'Titan One', cursive; /* Apply the Titan One font */
-  background-color: pink; /* Set the background color */
-  padding: 10px; /* Add padding to give some space around the text */
-  display: inline-block; /* Make the background color only cover the width of the text */
+.header-container {
+  background-color: pink;
+  padding: 20px;
+  text-align: center;
+}
+
+h1, h3 {
+  margin: 0;
+  font-family: 'Titan One', cursive;
 }
 
 .image-container {
@@ -40,6 +43,12 @@ h1,h3 {
   padding: 15px;
   margin-bottom: 10px;
   cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s; /* Add transition for smooth effect */
+}
+
+.generate-button:hover {
+  transform: scale(1.1); /* Increase size on hover */
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.8); /* Add box shadow on hover */
 }
 
 .content-container {
@@ -59,6 +68,6 @@ img {
 
 .caption {
   text-align: center;
-  font-size: medium;
-
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
 }
