@@ -72,7 +72,6 @@ img {
   font-family: 'Times New Roman', Times, serif;
 }
 
-/* Existing styles... */
 
 .save-button {
   background-color: #2ecc71;
@@ -98,13 +97,21 @@ img {
 
 .saved-image-box {
   margin: 5px;
-  padding: 5px;
-  border: 1px solid #ccc;
+  padding: 10px; /* Increase padding for bigger boxes */
+  border: 2px solid #000; /* Add a black border */
+  position: relative;
+  overflow: hidden; /* Hide overflow to ensure the image stays within the box */
+  transition: transform 0.2s;
+}
+
+.saved-image-box:hover {
+  transform: scale(1.1); /* Increase size on hover */
 }
 
 .saved-image {
-  width: 50px;
-  height: 50px;
+  width: 100%; /* Make the image fill the box */
+  height: auto;
   object-fit: cover;
 }
+
 
