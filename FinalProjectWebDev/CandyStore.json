@@ -1,31 +1,31 @@
 [
     {
-        "images": "CandyStore/GrapeRabbit.png",
+        "image": "CandyStore/GrapeRabbit.png",
         "caption": "Grape Rabbit"
     },
 
     {
-        "images": "CandyStore/LimeDog.png",
+        "image": "CandyStore/LimeDog.png",
         "caption": "Lime Dog"
     },
 
     {
-        "images": "CandyStore/MintRabbit.png",
+        "image": "CandyStore/MintRabbit.png",
         "caption": "Special Edition!! Mint Rabbit"
     },
 
     {
-        "images": "CandyStore/OrangeSheep.png",
+        "image": "CandyStore/OrangeSheep.png",
         "caption": "Orange Sheep"
     },
 
     {
-        "images": "CandyStore/PeachBear.png",
+        "image": "CandyStore/PeachBear.png",
         "caption": "Peach Bear"
     },
 
     {
-        "images": "CandyStore/SodaPig.png",
+        "image": "CandyStore/SodaPig.png",
         "caption": "Soda Pig"
     }
 ]
