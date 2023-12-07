@@ -14,7 +14,9 @@ body {
 h1,h3 {
   margin-top: 20px;
   font-family: 'Titan One', cursive; /* Apply the Titan One font */
-  color: pink;
+  background-color: pink; /* Set the background color */
+  padding: 10px; /* Add padding to give some space around the text */
+  display: inline-block; /* Make the background color only cover the width of the text */
 }
 
 .image-container {
