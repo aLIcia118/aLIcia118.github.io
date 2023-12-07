@@ -109,9 +109,10 @@ img {
 }
 
 .saved-image {
-  width: 100%; /* Make the image fill the box */
-  height: auto;
+  width: 80px; /* Adjust width as needed */
+  height: 80px; /* Adjust height as needed */
   object-fit: cover;
 }
+
 
 
