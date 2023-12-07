@@ -11,7 +11,9 @@ function generateRandomImage() {
     fetchUrl = 'images.json';
   } else if (activeButton === 'generate-button-animal') {
     fetchUrl = 'Animal.json';
-  } else {
+  } else if (activeButton === 'generate-button-candyStore'){
+    fetchUrl = 'CandyStore.json';
+  }else {
     console.error('Unknown active button:', activeButton);
     return;
   }
