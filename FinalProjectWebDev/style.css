@@ -8,8 +8,9 @@ body {
   height: 100vh;
 }
 
-h1 {
+h1,h3 {
   margin-top: 20px;
+  font-family: 'Titan One', cursive; /* Apply the Titan One font */
 }
 
 .image-container {
