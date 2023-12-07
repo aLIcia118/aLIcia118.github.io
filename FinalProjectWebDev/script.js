@@ -1,3 +1,7 @@
+function getRandomNumber(max) {
+  return Math.floor(Math.random() * max);
+}
+
 let activeButton = ''; 
 
 function setActiveButton(buttonId) {
@@ -31,6 +35,23 @@ function generateRandomImage() {
     .catch(error => console.error('Error fetching data:', error));
 }
 
-function getRandomNumber(max) {
-  return Math.floor(Math.random() * max);
+function saveImage() {
+  const randomImageSrc = document.getElementById('random-image').src;
+  const randomCaption = document.getElementById('caption').textContent;
+
+  if (randomImageSrc && randomCaption) {
+    const savedImagesContainer = document.getElementById('saved-images');
+
+    const savedImageBox = document.createElement('div');
+    savedImageBox.classList.add('saved-image-box');
+
+    const savedImage = document.createElement('img');
+    savedImage.classList.add('saved-image');
+    savedImage.src = randomImageSrc;
+    savedImage.alt = randomCaption;
+
+    savedImageBox.appendChild(savedImage);
+    savedImagesContainer.appendChild(savedImageBox);
+  }
 }
+
