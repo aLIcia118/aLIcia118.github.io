@@ -15,12 +15,17 @@ body {
   background-color: pink;
   padding: 20px;
   text-align: center;
+  width: 100%; /* Make the header span the entire width */
+  position: fixed; /* Fix the header at the top of the page */
+  top: 0; /* Position it at the top */
+  z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
 }
 
 h1, h3 {
   margin: 0;
   font-family: 'Titan One', cursive;
 }
+
 
 .image-container {
   display: flex;
