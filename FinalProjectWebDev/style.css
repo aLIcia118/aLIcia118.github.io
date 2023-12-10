@@ -13,7 +13,7 @@ body {
 }
 
 .header-container {
-  background-color: pink;
+  background-color: rgb(254, 167, 182);
   padding: 20px;
   text-align: center;
   width: 100%; /* Make the header span the entire width */
@@ -45,7 +45,7 @@ h1, h3 {
 }
 
 .generate-button {
-  background-color: pink;
+  background-color: rgb(254, 167, 182);
   color: white;
   border: none;
   border-radius: 50%;
