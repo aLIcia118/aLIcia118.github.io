@@ -1,9 +1,10 @@
 body {
   margin: 0;
-  background-image: url('background.jpeg');
+/*   background-image: url('background.jpeg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
