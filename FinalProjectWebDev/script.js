@@ -12,7 +12,7 @@ function generateRandomImage() {
   let fetchUrl = '';
 
   if (activeButton === 'generate-button-marine') {
-    fetchUrl = 'images.json';
+    fetchUrl = 'Marine.json';
   } else if (activeButton === 'generate-button-animal') {
     fetchUrl = 'Animal.json';
   } else if (activeButton === 'generate-button-candyStore'){
