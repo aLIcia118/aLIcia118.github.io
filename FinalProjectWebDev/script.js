@@ -1,8 +1,9 @@
+let activeButton = '';
+let savedImageCount = 0;
+
 function getRandomNumber(max) {
   return Math.floor(Math.random() * max);
 }
-
-let activeButton = ''; 
 
 function setActiveButton(buttonId) {
   activeButton = buttonId;
