@@ -47,6 +47,7 @@ h1, h3 {
 .generate-button {
   background-color: rgb(254, 167, 182);
   color: white;
+  font-family: 'Concert One', cursive;
   border: none;
   border-radius: 50%;
   padding: 15px;
