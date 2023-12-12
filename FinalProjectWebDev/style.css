@@ -28,11 +28,11 @@ body {
   font-size: 4em; /* Adjust the font size as needed */
 }
 
-.header-container h3 {
+.header-container h2 {
   font-size: 1.5em; /* Adjust the font size as needed */
 }
 
-h1, h3 {
+h1, h2 {
   margin: 0;
   font-family: 'Concert One', cursive;
   color: white;
