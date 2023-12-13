@@ -79,6 +79,18 @@ function saveImage() {
   // Append caption to the saved image box
   savedImageBox.appendChild(captionElement);
 
+  let captionElement = document.getElementById('hover-caption');
+
+  if (!captionElement) {
+    captionElement = document.createElement('div');
+    captionElement.id = 'hover-caption';
+    captionElement.classList.add('hover-caption');
+    document.body.appendChild(captionElement);
+  }
+
+  // Update caption text
+  captionElement.textContent = randomCaption;
+
   // Update caption position on mousemove within the saved image box
   savedImageBox.addEventListener('mousemove', function (event) {
     captionElement.style.position = 'fixed'; // Use 'fixed' to position relative to the viewport
@@ -88,6 +100,8 @@ function saveImage() {
 
   // Remove the caption on mouseout
   savedImageBox.addEventListener('mouseout', function () {
-    savedImageBox.removeChild(captionElement);
+    captionElement.textContent = ''; // Clear text
+    captionElement.style.left = '-9999px'; // Move off-screen
+    captionElement.style.top = '-9999px';
   });
 }
