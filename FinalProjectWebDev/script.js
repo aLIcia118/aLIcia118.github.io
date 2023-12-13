@@ -53,7 +53,6 @@ function generateRandomImage() {
 
 let savedImagesInCurrentLine = 0;
 
-
 function saveImage() {
   const savedImagesContainer = document.getElementById('saved-images');
   const randomImageSrc = document.getElementById('random-image').src;
@@ -62,8 +61,14 @@ function saveImage() {
   if (randomImageSrc && randomCaption) {
     // Check if the number of saved images in the current line is 6
     if (savedImagesInCurrentLine === 6) {
-      // Reset the count and create a new line
+      // Reset the count and increase the margin-top of body-container
       savedImagesInCurrentLine = 0;
+      const bodyContainer = document.querySelector('.body-container');
+      const currentMarginTop = parseInt(window.getComputedStyle(bodyContainer).marginTop);
+      const newMarginTop = currentMarginTop + 20; // Adjust the value as needed
+      bodyContainer.style.marginTop = `${newMarginTop}px`;
+
+      // Create a new line
       const lineBreak = document.createElement('br');
       savedImagesContainer.appendChild(lineBreak);
     }
@@ -110,8 +115,5 @@ function saveImage() {
     });
   }
 }
-
-
-
 
 
