@@ -98,7 +98,7 @@ function saveImage() {
     captionElement.textContent = randomCaption;
 
     // Show caption on mouseover
-    savedImageBox.addEventListener('mouseover', function () {
+    savedImageBox.addEventListener('mouseover', function (event) {
       captionElement.style.position = 'fixed'; // Use 'fixed' to position relative to the viewport
       captionElement.style.left = `${event.clientX}px`;
       captionElement.style.top = `${event.clientY}px`;
@@ -110,3 +110,5 @@ function saveImage() {
     });
   }
 }
+
+
