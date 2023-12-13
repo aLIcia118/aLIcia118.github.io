@@ -39,18 +39,11 @@ function generateRandomImage() {
 }
 
 function saveImage() {
+  const savedImagesContainer = document.getElementById('saved-images');
   const randomImageSrc = document.getElementById('random-image').src;
   const randomCaption = document.getElementById('caption').textContent;
 
   if (randomImageSrc && randomCaption) {
-    const savedImagesContainer = document.getElementById('saved-images');
-
-    if (savedImageCount % 8 === 0) {
-      // Create a new line before adding the next set of saved images
-      const lineBreak = document.createElement('br');
-      savedImagesContainer.appendChild(lineBreak);
-    }
-
     const savedImageBox = document.createElement('div');
     savedImageBox.classList.add('saved-image-box');
 
@@ -59,19 +52,29 @@ function saveImage() {
     savedImage.src = randomImageSrc;
     savedImage.alt = randomCaption;
 
-    // Show caption on hover
-    savedImage.addEventListener('mouseover', function () {
-      document.getElementById('hover-caption').textContent = randomCaption;
-    });
-
-    // Clear caption on mouseout
-    savedImage.addEventListener('mouseout', function () {
-      document.getElementById('hover-caption').textContent = '';
-    });
-
     savedImageBox.appendChild(savedImage);
     savedImagesContainer.appendChild(savedImageBox);
 
-    savedImageCount++;
+    savedImage.addEventListener('mouseover', function (event) {
+      // Create a caption element and append it to the body
+      const captionElement = document.createElement('div');
+      captionElement.classList.add('hover-caption');
+      captionElement.textContent = randomCaption;
+      document.body.appendChild(captionElement);
+
+      // Calculate the position of the caption based on the mouse position
+      const x = event.clientX;
+      const y = event.clientY - 30; // Adjust the value to position the caption above the mouse
+
+      // Set the position of the caption
+      captionElement.style.position = 'absolute';
+      captionElement.style.left = `${x}px`;
+      captionElement.style.top = `${y}px`;
+
+      // Remove the caption on mouseout
+      savedImage.addEventListener('mouseout', function () {
+        document.body.removeChild(captionElement);
+      });
+    });
   }
 }
