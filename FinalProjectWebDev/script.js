@@ -73,25 +73,21 @@ function saveImage() {
     savedImageCount++;
 
     const captionElement = document.createElement('div');
-    captionElement.classList.add('hover-caption');
-    captionElement.textContent = randomCaption;
+  captionElement.classList.add('hover-caption');
+  captionElement.textContent = randomCaption;
 
-    // Append caption to the saved image box
-    savedImageBox.appendChild(captionElement);
+  // Append caption to the saved image box
+  savedImageBox.appendChild(captionElement);
 
-    // Update caption position on mousemove within the saved image box
-    savedImageBox.addEventListener('mousemove', function (event) {
-      const x = event.clientX - savedImageBox.getBoundingClientRect().left;
-      const y = event.clientY - savedImageBox.getBoundingClientRect().top;
+  // Update caption position on mousemove within the saved image box
+  savedImageBox.addEventListener('mousemove', function (event) {
+    captionElement.style.position = 'fixed'; // Use 'fixed' to position relative to the viewport
+    captionElement.style.left = `${event.clientX}px`;
+    captionElement.style.top = `${event.clientY}px`;
+  });
 
-      captionElement.style.position = 'absolute';
-      captionElement.style.left = `${x}px`;
-      captionElement.style.top = `${y}px`;
-    });
-
-    // Remove the caption on mouseout
-    savedImageBox.addEventListener('mouseout', function () {
-      savedImageBox.removeChild(captionElement);
-    });
-  }
+  // Remove the caption on mouseout
+  savedImageBox.addEventListener('mouseout', function () {
+    savedImageBox.removeChild(captionElement);
+  });
 }
