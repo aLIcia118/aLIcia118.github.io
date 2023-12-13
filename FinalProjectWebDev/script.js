@@ -44,6 +44,13 @@ function saveImage() {
   const randomCaption = document.getElementById('caption').textContent;
 
   if (randomImageSrc && randomCaption) {
+    // Check if the number of saved images is a multiple of 8
+    if (savedImageCount % 8 === 0) {
+      // Create a new line before adding the next set of saved images
+      const lineBreak = document.createElement('br');
+      savedImagesContainer.appendChild(lineBreak);
+    }
+
     const savedImageBox = document.createElement('div');
     savedImageBox.classList.add('saved-image-box');
 
@@ -54,6 +61,9 @@ function saveImage() {
 
     savedImageBox.appendChild(savedImage);
     savedImagesContainer.appendChild(savedImageBox);
+
+    // Increment the saved image count
+    savedImageCount++;
 
     savedImage.addEventListener('mouseover', function (event) {
       // Create a caption element and append it to the body
