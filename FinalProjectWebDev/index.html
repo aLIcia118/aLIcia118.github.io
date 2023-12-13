@@ -7,21 +7,23 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap">
 </head>
-<body class="body-container">
+<body>
   <div class="header-container">
     <h1>SonnyAngel Generator</h1>
     <h3>May he bring you happiness</h3>
   </div>
 
-  <div id="image-container" class="image-container">
-    <div class="button-container">
-      <button id="generate-button-marine" onclick="setActiveButton('generate-button-marine'); generateRandomImage()" class="generate-button">Marine</button>
-      <button id="generate-button-animal" onclick="setActiveButton('generate-button-animal'); generateRandomImage()" class="generate-button">Animal</button>
-      <button id="generate-button-candyStore" onclick="setActiveButton('generate-button-candyStore'); generateRandomImage()" class="generate-button">Candy Store</button>
-      <button id="generate-button-custom" onclick="setActiveButton('generate-button-custom'); generateRandomImage()" class="generate-button"> My Version </button>
+  <div class="body-container>
+    <div id="image-container" class="image-container">
+      <div class="button-container">
+        <button id="generate-button-marine" onclick="setActiveButton('generate-button-marine'); generateRandomImage()" class="generate-button">Marine</button>
+        <button id="generate-button-animal" onclick="setActiveButton('generate-button-animal'); generateRandomImage()" class="generate-button">Animal</button>
+        <button id="generate-button-candyStore" onclick="setActiveButton('generate-button-candyStore'); generateRandomImage()" class="generate-button">Candy Store</button>
+        <button id="generate-button-custom" onclick="setActiveButton('generate-button-custom'); generateRandomImage()" class="generate-button"> My Version </button>
 
       <button id="save-button" onclick="saveImage()" class="save-button">Save</button>
     </div>
+  </div>
     <div class="content-container">
       <img id="random-image" alt="Random Image" class="random-image">
       <p id="caption" class="caption"></p>
