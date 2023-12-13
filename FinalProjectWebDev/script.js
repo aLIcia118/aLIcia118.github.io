@@ -72,26 +72,26 @@ function saveImage() {
     // Increment the saved image count
     savedImageCount++;
 
-    savedImage.addEventListener('mouseover', function (event) {
-      // Create a caption element and append it to the body
-      const captionElement = document.createElement('div');
-      captionElement.classList.add('hover-caption');
-      captionElement.textContent = randomCaption;
-      document.body.appendChild(captionElement);
+    const captionElement = document.createElement('div');
+    captionElement.classList.add('hover-caption');
+    captionElement.textContent = randomCaption;
 
-      // Calculate the position of the caption based on the mouse position
-      const x = event.clientX;
-      const y = event.clientY - 30; // Adjust the value to position the caption above the mouse
+    // Append caption to the saved image box
+    savedImageBox.appendChild(captionElement);
 
-      // Set the position of the caption
+    // Update caption position on mousemove within the saved image box
+    savedImageBox.addEventListener('mousemove', function (event) {
+      const x = event.clientX - savedImageBox.getBoundingClientRect().left;
+      const y = event.clientY - savedImageBox.getBoundingClientRect().top;
+
       captionElement.style.position = 'absolute';
       captionElement.style.left = `${x}px`;
       captionElement.style.top = `${y}px`;
+    });
 
-      // Remove the caption on mouseout
-      savedImage.addEventListener('mouseout', function () {
-        document.body.removeChild(captionElement);
-      });
+    // Remove the caption on mouseout
+    savedImageBox.addEventListener('mouseout', function () {
+      savedImageBox.removeChild(captionElement);
     });
   }
 }
