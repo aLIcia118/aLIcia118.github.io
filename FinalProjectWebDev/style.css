@@ -45,6 +45,7 @@ h1, h3 {
   align-items: center;
   margin-top: 50px;
   padding-top: 20px; /* Add padding to the top to prevent images from going under the header */
+  padding-bottom: 20px
 }
 
 
@@ -80,7 +81,7 @@ h1, h3 {
 img {
   max-width: 100%;
   height: auto;
-  margin-left: 20px; 
+  margin-left: 30px; 
 }
 
 .random-image {
