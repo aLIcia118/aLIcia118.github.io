@@ -43,7 +43,7 @@ function generateRandomImage() {
       document.getElementById('random-image').src = randomImage.image;
 
       // Check if this is the first image loaded
-      if (savedImageCount === 0) {
+      if (savedImageCount <=1) {
         // Set the initial caption text only for the first image
         document.getElementById('caption').textContent = randomImage.caption;
       }
