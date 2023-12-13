@@ -51,6 +51,8 @@ function generateRandomImage() {
     .catch(error => console.error('Error fetching data:', error));
 }
 
+let savedImagesInCurrentLine = 0;
+
 
 function saveImage() {
   const savedImagesContainer = document.getElementById('saved-images');
@@ -58,15 +60,10 @@ function saveImage() {
   const randomCaption = document.getElementById('caption').textContent;
 
   if (randomImageSrc && randomCaption) {
-    // Check if the number of saved images is a multiple of 8
-    if (savedImageCount % 8 === 0) {
-      // Increment the margin-top by a certain amount
-      const bodyContainer = document.querySelector('.body-container');
-      const currentMarginTop = parseInt(window.getComputedStyle(bodyContainer).marginTop);
-      const newMarginTop = currentMarginTop + 20; // Adjust the value as needed
-      bodyContainer.style.marginTop = `${newMarginTop}px`;
-
-      // Create a new line before adding the next set of saved images
+    // Check if the number of saved images in the current line is 6
+    if (savedImagesInCurrentLine === 6) {
+      // Reset the count and create a new line
+      savedImagesInCurrentLine = 0;
       const lineBreak = document.createElement('br');
       savedImagesContainer.appendChild(lineBreak);
     }
@@ -82,8 +79,9 @@ function saveImage() {
     savedImageBox.appendChild(savedImage);
     savedImagesContainer.appendChild(savedImageBox);
 
-    // Increment the saved image count
+    // Increment the saved image count and the count in the current line
     savedImageCount++;
+    savedImagesInCurrentLine++;
 
     let captionElement = document.getElementById('hover-caption');
 
@@ -98,7 +96,7 @@ function saveImage() {
     captionElement.textContent = randomCaption;
 
     // Show caption on mouseover
-    savedImageBox.addEventListener('mouseover', function (event) {
+    savedImageBox.addEventListener('mouseover', function () {
       captionElement.style.position = 'fixed'; // Use 'fixed' to position relative to the viewport
       captionElement.style.left = `${event.clientX}px`;
       captionElement.style.top = `${event.clientY}px`;
@@ -107,8 +105,13 @@ function saveImage() {
     // Remove the caption on mouseout
     savedImageBox.addEventListener('mouseout', function () {
       captionElement.textContent = ''; // Clear text
+      captionElement.style.left = '-9999px'; // Move off-screen
+      captionElement.style.top = '-9999px';
     });
   }
 }
+
+
+
 
 
