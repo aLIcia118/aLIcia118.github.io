@@ -60,6 +60,12 @@ function saveImage() {
   if (randomImageSrc && randomCaption) {
     // Check if the number of saved images is a multiple of 8
     if (savedImageCount % 8 === 0) {
+      // Increment the margin-top by a certain amount
+      const bodyContainer = document.querySelector('.body-container');
+      const currentMarginTop = parseInt(window.getComputedStyle(bodyContainer).marginTop);
+      const newMarginTop = currentMarginTop + 20; // Adjust the value as needed
+      bodyContainer.style.marginTop = `${newMarginTop}px`;
+
       // Create a new line before adding the next set of saved images
       const lineBreak = document.createElement('br');
       savedImagesContainer.appendChild(lineBreak);
@@ -88,9 +94,11 @@ function saveImage() {
       document.body.appendChild(captionElement);
     }
 
-    // Update caption text and position on mouseover
-    savedImageBox.addEventListener('mouseover', function (event) {
-      captionElement.textContent = randomCaption;
+    // Update caption text
+    captionElement.textContent = randomCaption;
+
+    // Show caption on mouseover
+    savedImageBox.addEventListener('mouseover', function () {
       captionElement.style.position = 'fixed'; // Use 'fixed' to position relative to the viewport
       captionElement.style.left = `${event.clientX}px`;
       captionElement.style.top = `${event.clientY}px`;
