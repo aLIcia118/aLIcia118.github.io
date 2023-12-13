@@ -7,7 +7,7 @@ window.addEventListener('load', function () {
 });
 
 let activeButton = '';
-let savedImageCount = '';
+let savedImageCount = 0;
 
 function setActiveButton(buttonId) {
   activeButton = buttonId;
