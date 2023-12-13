@@ -6,7 +6,7 @@ body {
   align-items: center;
   justify-content: center; /* Center both horizontally and vertically */
   height: 100vh;
-  cursor: url('heartMouse.png'), auto;
+  cursor: url('heartMouse.webp'), auto;
 }
 
 .header-container {
