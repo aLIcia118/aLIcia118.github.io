@@ -116,6 +116,8 @@ img {
   justify-content: center;
   margin-top: 20px; /* Adjust the top margin as needed */
   padding-top: 20px; /* Add padding to the top as an alternative or in addition to margin */
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 /* Existing styles... */
