@@ -42,12 +42,10 @@ function generateRandomImage() {
       // Update the image container
       document.getElementById('random-image').src = randomImage.image;
 
-      // Check if this is the first image loaded
-      if (savedImageCount <=1) {
-        // Set the initial caption text only for the first image
-        document.getElementById('caption').textContent = randomImage.caption;
-      }
+      // Set the caption text for the current image
+      document.getElementById('caption').textContent = randomImage.caption;
 
+      // Increment the saved image count (if needed)
       savedImageCount++;
     })
     .catch(error => console.error('Error fetching data:', error));
