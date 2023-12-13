@@ -88,14 +88,15 @@ function saveImage() {
       document.body.appendChild(captionElement);
     }
 
-    // Update caption text on mouseover
-    savedImageBox.addEventListener('mouseover', function () {
-      captionElement.textContent = randomCaption;
-    });
+   // Update caption text and position on mouseover
+savedImageBox.addEventListener('mouseover', function (event) {
+  captionElement.textContent = randomCaption;
+  captionElement.style.position = 'fixed'; // Use 'fixed' to position relative to the viewport
+  captionElement.style.left = `${event.clientX}px`;
+  captionElement.style.top = `${event.clientY}px`;
+});
 
-    // Remove the caption on mouseout
-    savedImageBox.addEventListener('mouseout', function () {
-      captionElement.textContent = ''; // Clear text
-    });
-  }
-}
+// Remove the caption on mouseout
+savedImageBox.addEventListener('mouseout', function () {
+  captionElement.textContent = ''; // Clear text
+});
