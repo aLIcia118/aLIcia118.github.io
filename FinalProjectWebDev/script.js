@@ -7,14 +7,14 @@ window.addEventListener('load', function () {
 });
 
 let activeButton = '';
-let savedImageCount = 0;
-
-function getRandomNumber(max) {
-  return Math.floor(Math.random() * max);
-}
+let savedImageCount = '';
 
 function setActiveButton(buttonId) {
   activeButton = buttonId;
+}
+
+function getRandomNumber(max) {
+  return Math.floor(Math.random() * max);
 }
 
 function generateRandomImage() {
