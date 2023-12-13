@@ -1,3 +1,11 @@
+window.addEventListener('load', function () {
+  // Code to run when the page is loaded
+  const randomImageElement = document.getElementById('random-image');
+  if (randomImageElement) {
+    randomImageElement.alt = ''; // Set alt attribute to an empty string
+  }
+});
+
 let activeButton = '';
 let savedImageCount = 0;
 
