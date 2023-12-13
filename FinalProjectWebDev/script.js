@@ -18,9 +18,9 @@ function generateRandomImage() {
     fetchUrl = 'Animal.json';
   } else if (activeButton === 'generate-button-candyStore'){
     fetchUrl = 'CandyStore.json';
-  }else if (activeButton === 'generate-button-custom'){
+  } else if (activeButton === 'generate-button-custom'){
     fetchUrl = 'Custom.json';
-  }else {
+  } else {
     console.error('Unknown active button:', activeButton);
     return;
   }
@@ -33,7 +33,14 @@ function generateRandomImage() {
 
       // Update the image container
       document.getElementById('random-image').src = randomImage.image;
-      document.getElementById('caption').textContent = randomImage.caption;
+
+      // Check if this is the first image loaded
+      if (savedImageCount === 0) {
+        // Set the initial caption text only for the first image
+        document.getElementById('caption').textContent = randomImage.caption;
+      }
+
+      savedImageCount++;
     })
     .catch(error => console.error('Error fetching data:', error));
 }
