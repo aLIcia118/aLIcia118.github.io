@@ -13,7 +13,7 @@
     <h3>May he bring you happiness</h3>
   </div>
 
-  <div class="body-container>
+  <div class="body-container">
     <div id="image-container" class="image-container">
       <div class="button-container">
         <button id="generate-button-marine" onclick="setActiveButton('generate-button-marine'); generateRandomImage()" class="generate-button">Marine</button>
@@ -21,21 +21,19 @@
         <button id="generate-button-candyStore" onclick="setActiveButton('generate-button-candyStore'); generateRandomImage()" class="generate-button">Candy Store</button>
         <button id="generate-button-custom" onclick="setActiveButton('generate-button-custom'); generateRandomImage()" class="generate-button"> My Version </button>
 
-      <button id="save-button" onclick="saveImage()" class="save-button">Save</button>
+        <button id="save-button" onclick="saveImage()" class="save-button">Save</button>
+      </div>
+      <div class="content-container">
+        <img id="random-image" alt="Random Image" class="random-image">
+        <p id="caption" class="caption">Initial Caption</p>
+      </div>
     </div>
-  </div>
-    <div class="content-container">
-      <img id="random-image" alt="Random Image" class="random-image">
-      <p id="caption" class="caption"></p>
-    </div>
-  </div>
 
-  <h2>♡ Your Sonny Angel Collection ♡</h2>
-  <div id="saved-images" class="saved-images"></div>
-  <h4 id="hover-caption" class="hover-caption"></h4>
-
+    <h2>♡ Your Sonny Angel Collection ♡</h2>
+    <div id="saved-images" class="saved-images"></div>
+    <h4 id="hover-caption" class="hover-caption"></h4>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
