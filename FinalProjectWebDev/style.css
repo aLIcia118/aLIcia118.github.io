@@ -23,6 +23,26 @@ body {
 
 .body-container {
   margin-top: 180px; /* Adjust the value based on your header height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Set a minimum height to ensure content stays centered */
+}
+
+.content-container {
+  text-align: center;
+  margin-top: 20px; /* Add space between the buttons and the saved images */
+}
+
+.saved-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .header-container h1 {
@@ -79,9 +99,6 @@ h1, h3 {
   box-shadow: 0 0 10px rgba(52, 152, 219, 0.8); /* Add box shadow on hover */
 }
 
-.content-container {
-  text-align: center;
-}
 
 img {
   max-width: 100%;
@@ -116,18 +133,6 @@ img {
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(46, 204, 113, 0.8);
 }
-
-.saved-images {
-  display: flex;
-  flex-wrap: wrap; /* Allow flex items to wrap to the next line */
-  justify-content: center;
-  margin-top: 20px; /* Adjust the top margin as needed */
-  padding-top: 20px; /* Add padding to the top as an alternative or in addition to margin */
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
-
-/* Existing styles... */
 
 .saved-image-box {
   margin: 5px;
