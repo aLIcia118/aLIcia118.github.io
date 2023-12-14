@@ -12,19 +12,35 @@ function showConfirmation() {
   const savedImages = savedImagesContainer.querySelectorAll('.saved-image');
 
   if (savedImages.length > 0) {
-    // Display a confirmation dialog
-    const confirmation = confirm("Oh no! Your collection will not be saved! Do you want to continue?");
+    // Display a custom confirmation modal
+    const confirmationModal = document.createElement('div');
+    confirmationModal.classList.add('confirmation-modal');
+    
+    const message = document.createElement('p');
+    message.textContent = "Oh no! Your collection will not be saved! Do you want to continue?";
+    confirmationModal.appendChild(message);
 
-    // If the user clicks "OK", navigate to the link
-    if (confirmation) {
-      window.location.href = "https://www.sonnyangel.com/en/"; 
-    }
-    // If the user clicks "Cancel," do nothing (no navigation)
+    const confirmButton = document.createElement('button');
+    confirmButton.textContent = 'OK';
+    confirmButton.addEventListener('click', function() {
+      window.location.href = "https://www.sonnyangel.com/en/"; // Replace "your-link-url" with the actual URL
+    });
+    confirmationModal.appendChild(confirmButton);
+
+    const cancelButton = document.createElement('button');
+    cancelButton.textContent = 'Cancel';
+    cancelButton.addEventListener('click', function() {
+      document.body.removeChild(confirmationModal);
+    });
+    confirmationModal.appendChild(cancelButton);
+
+    document.body.appendChild(confirmationModal);
   } else {
     // No saved images, no need for confirmation
-    window.location.href = "https://www.sonnyangel.com/en/"; 
+    window.location.href = "https://www.sonnyangel.com/en/"; // Replace "your-link-url" with the actual URL
   }
 }
+
 
 
 let activeButton = '';
