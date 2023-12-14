@@ -63,10 +63,10 @@ function saveImage() {
     if (savedImagesInCurrentLine === 6) {
       // Reset the count and increase the margin-top of body-container
       savedImagesInCurrentLine = 0;
-      const bodyContainer = document.querySelector('.body-container');
-      const currentMarginTop = parseInt(getComputedStyle(bodyContainer).marginTop);
-      const newMarginTop = currentMarginTop + 20; // Adjust the value as needed
-      bodyContainer.style.marginTop = `${newMarginTop}px`;
+      const imageContainer = document.querySelector('.image-container');
+      const currentPaddingTop = parseInt(getComputedStyle(imageContainer).paddingTop);
+      const newMarginTop = currentPaddingTop + 120; // Adjust the value as needed
+      imageContainer.style.paddingTop = `${newPaddingTop}px`;
 
       // Create a new line
       const lineBreak = document.createElement('br');
