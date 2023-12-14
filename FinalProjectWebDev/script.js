@@ -88,34 +88,30 @@ function saveImage() {
     savedImageCount++;
     savedImagesInCurrentLine++;
 
-    // ...
+    let captionElement = document.getElementById('hover-caption');
 
-let captionElement = document.getElementById('hover-caption');
+    if (!captionElement) {
+      captionElement = document.createElement('div');
+      captionElement.id = 'hover-caption';
+      captionElement.classList.add('hover-caption');
+      document.body.appendChild(captionElement);
+    }
 
-if (!captionElement) {
-  captionElement = document.createElement('div');
-  captionElement.id = 'hover-caption';
-  captionElement.classList.add('hover-caption');
-  document.body.appendChild(captionElement);
-}
+    // Update caption text
+    captionElement.textContent = randomCaption;
 
-// Update caption text
-captionElement.textContent = randomCaption;
+    // Show caption on mouseover
+    savedImageBox.addEventListener('mouseover', function () {
+      captionElement.style.position = 'fixed'; // Use 'fixed' to position relative to the viewport
+      captionElement.style.left = `${event.clientX}px`;
+      captionElement.style.top = `${event.clientY}px`;
+    });
 
-// Show caption on mouseover
-savedImageBox.addEventListener('mouseover', function () {
-  captionElement.style.position = 'fixed';
-  captionElement.style.left = `${event.clientX}px`;
-  captionElement.style.top = `${event.clientY}px`;
-});
-
-// Remove the caption on mouseout
-savedImageBox.addEventListener('mouseout', function () {
-  captionElement.textContent = ''; // Clear text
-  captionElement.style.left = '-9999px';
-  captionElement.style.top = '-9999px';
-});
+    // Remove the caption on mouseout
+    savedImageBox.addEventListener('mouseout', function () {
+      captionElement.textContent = ''; // Clear text
+      captionElement.style.left = '-9999px'; // Move off-screen
+      captionElement.style.top = '-9999px';
+    });
   }
 }
-
-
