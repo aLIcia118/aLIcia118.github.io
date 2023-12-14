@@ -118,6 +118,8 @@ img {
 .random-image {
   display: block;
   margin: 0 auto; /* Center the image horizontally */
+  max-width: 85%; /* Set the maximum width to 100% */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
 }
 
 .caption {
