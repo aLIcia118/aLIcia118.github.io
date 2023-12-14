@@ -67,7 +67,7 @@ function saveImage() {
         savedImagesInCurrentLine = 0;
         const imageContainer = document.querySelector('.image-container');
         const currentPaddingTop = parseInt(getComputedStyle(imageContainer).paddingTop);
-        const newPaddingTop = currentPaddingTop + 120; // Adjust the value as needed
+        const newPaddingTop = currentPaddingTop + 100; // Adjust the value as needed
         imageContainer.style.paddingTop = `${newPaddingTop}px`;
       
         // Create a new line
