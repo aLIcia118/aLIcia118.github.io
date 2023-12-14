@@ -56,7 +56,16 @@ body {
 h2{
   padding-top: 40px;
   text-align: center; 
+  font-family: 'Concert One', cursive;
+
 }
+
+h4{
+  font-family: 'Concert One', cursive;
+  padding-bottom: 10px
+
+}
+
 
 h1, h3 {
   margin: 0;
