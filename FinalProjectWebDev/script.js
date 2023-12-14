@@ -60,18 +60,21 @@ function saveImage() {
 
   if (randomImageSrc && randomCaption) {
     // Check if the number of saved images in the current line is 6
-    if (savedImagesInCurrentLine === 6) {
-      // Reset the count and increase the margin-top of body-container
-      savedImagesInCurrentLine = 0;
-      const imageContainer = document.querySelector('.image-container');
-      const currentPaddingTop = parseInt(getComputedStyle(imageContainer).paddingTop);
-      const newMarginTop = currentPaddingTop + 120; // Adjust the value as needed
-      imageContainer.style.paddingTop = `${newPaddingTop}px`;
+    
+      // Check if the number of saved images in the current line is 6
+      if (savedImagesInCurrentLine === 6) {
+        // Reset the count and increase the margin-top of body-container
+        savedImagesInCurrentLine = 0;
+        const imageContainer = document.querySelector('.image-container');
+        const currentPaddingTop = parseInt(getComputedStyle(imageContainer).paddingTop);
+        const newPaddingTop = currentPaddingTop + 120; // Adjust the value as needed
+        imageContainer.style.paddingTop = `${newPaddingTop}px`;
+      
+        // Create a new line
+        const lineBreak = document.createElement('br');
+        savedImagesContainer.appendChild(lineBreak);
+      }
 
-      // Create a new line
-      const lineBreak = document.createElement('br');
-      savedImagesContainer.appendChild(lineBreak);
-    }
     
     const savedImageBox = document.createElement('div');
     savedImageBox.classList.add('saved-image-box');
