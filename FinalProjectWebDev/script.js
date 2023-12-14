@@ -98,14 +98,16 @@ function saveImage() {
       captionElement.classList.add('hover-caption');
       document.body.appendChild(captionElement);
     }
-    
+
+
     // Show caption on mouseover
-    savedImageBox.addEventListener('mouseover', function (event) {
+    savedImageBox.addEventListener('mousemove', function (event) {
       captionElement.textContent = randomCaption;
       captionElement.style.position = 'fixed'; // Use 'fixed' to position relative to the viewport
       captionElement.style.left = `${event.clientX}px`;
       captionElement.style.top = `${event.clientY}px`;
     });
+
     
     // Remove the caption on mouseout
     savedImageBox.addEventListener('mouseout', function () {
