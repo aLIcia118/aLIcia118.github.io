@@ -64,7 +64,7 @@ function saveImage() {
       // Reset the count and increase the margin-top of body-container
       savedImagesInCurrentLine = 0;
       const bodyContainer = document.querySelector('.body-container');
-      const currentMarginTop = parseInt(window.getComputedStyle(bodyContainer).marginTop);
+      const currentMarginTop = parseInt(getComputedStyle(bodyContainer).marginTop);
       const newMarginTop = currentMarginTop + 20; // Adjust the value as needed
       bodyContainer.style.marginTop = `${newMarginTop}px`;
 
@@ -72,7 +72,7 @@ function saveImage() {
       const lineBreak = document.createElement('br');
       savedImagesContainer.appendChild(lineBreak);
     }
-
+    
     const savedImageBox = document.createElement('div');
     savedImageBox.classList.add('saved-image-box');
 
@@ -113,6 +113,9 @@ function saveImage() {
       captionElement.style.left = '-9999px'; // Move off-screen
       captionElement.style.top = '-9999px';
     });
+
+    savedImageCount++;
+    savedImagesInCurrentLine++;
 
   }
 }
