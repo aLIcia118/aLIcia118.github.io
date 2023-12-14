@@ -6,6 +6,25 @@ window.addEventListener('load', function () {
   }
 });
 
+function showConfirmation() {
+      // Check if there are saved images
+      const savedImagesContainer = document.getElementById('saved-images');
+      const savedImages = savedImagesContainer.querySelectorAll('.saved-image');
+
+      if (savedImages.length > 0) {
+        // Display a confirmation dialog
+        const confirmation = confirm("Oh no! Your collection will not be saved! Do you want to continue?");
+
+        // If the user clicks "OK", navigate to the link
+        if (confirmation) {
+          window.location.href = "https://www.sonnyangel.com/en/"; // Replace "your-link-url" with the actual URL
+        }
+      } else {
+        // No saved images, no need for confirmation
+        window.location.href = "https://www.sonnyangel.com/en/"; // Replace "your-link-url" with the actual URL
+      }
+    }
+
 let activeButton = '';
 let savedImageCount = 0;
 
