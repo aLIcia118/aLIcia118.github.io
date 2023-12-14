@@ -17,12 +17,12 @@ function showConfirmation() {
 
     // If the user clicks "OK", navigate to the link
     if (confirmation) {
-      window.location.href = "https://www.sonnyangel.com/en/"; // Replace "your-link-url" with the actual URL
+      window.location.href = "https://www.sonnyangel.com/en/"; 
     }
     // If the user clicks "Cancel," do nothing (no navigation)
   } else {
     // No saved images, no need for confirmation
-    window.location.href = "https://www.sonnyangel.com/en/"; // Replace "your-link-url" with the actual URL
+    window.location.href = "https://www.sonnyangel.com/en/"; 
   }
 }
 
