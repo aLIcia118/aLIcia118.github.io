@@ -3,8 +3,20 @@ window.addEventListener('load', function () {
     const randomImageElement = document.getElementById('random-image');
     if (randomImageElement) {
         randomImageElement.alt = ''; // Set alt attribute to an empty string
+
+        // Hide the image icon by setting the src to an empty string
+        randomImageElement.src = '';
+
+        // Hide the black dot (caption) by setting initial style
+        const captionElement = document.getElementById('hover-caption');
+        if (captionElement) {
+            captionElement.textContent = ''; // Clear text
+            captionElement.style.left = '-9999px'; // Move off-screen
+            captionElement.style.top = '-9999px';
+        }
     }
 });
+
 
 function showConfirmation() {
     // Check if there are saved images
