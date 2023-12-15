@@ -18,7 +18,8 @@ window.addEventListener('load', function () {
 });
 
 
-function showConfirmation() {
+
+function showConfirmation(event) {
     // Check if there are saved images
     const savedImagesContainer = document.getElementById('saved-images');
     const savedImages = savedImagesContainer.querySelectorAll('.saved-image');
@@ -28,21 +29,19 @@ function showConfirmation() {
         const confirmation = confirm("Oh no! Your collection will not be saved. Do you want to continue?");
 
         // If the user clicks "OK", navigate to the link
-        if (confirmation) {
-            window.location.href = "https://www.sonnyangel.com/en/";
-        } else {
-            // If the user clicks "Cancel", remove the confirmation message
-            // You may need to customize this part based on your HTML structure
+        if (!confirmation) {
+            // If the user clicks "Cancel", prevent the default behavior (navigation)
+            event.preventDefault();
+
+            // Remove the confirmation message
             const confirmationMessage = document.querySelector('.confirmation-message');
             if (confirmationMessage) {
                 confirmationMessage.remove();
             }
         }
-    } else {
-        // No saved images, no need for confirmation
-        window.location.href = "https://www.sonnyangel.com/en/";
     }
 }
+
 
 let activeButton = '';
 let savedImageCount = 0;
