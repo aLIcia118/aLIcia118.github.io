@@ -15,21 +15,21 @@ function showConfirmation() {
     // Display a custom confirmation modal
     const confirmationModal = document.createElement('div');
     confirmationModal.classList.add('confirmation-modal');
-    
+
     const message = document.createElement('p');
     message.textContent = "Oh no! Your collection will not be saved! Do you want to continue?";
     confirmationModal.appendChild(message);
 
     const confirmButton = document.createElement('button');
     confirmButton.textContent = 'OK';
-    confirmButton.addEventListener('click', function() {
+    confirmButton.addEventListener('click', function () {
       window.location.href = "https://www.sonnyangel.com/en/"; // Replace "your-link-url" with the actual URL
     });
     confirmationModal.appendChild(confirmButton);
 
     const cancelButton = document.createElement('button');
     cancelButton.textContent = 'Cancel';
-    cancelButton.addEventListener('click', function() {
+    cancelButton.addEventListener('click', function () {
       document.body.removeChild(confirmationModal);
     });
     confirmationModal.appendChild(cancelButton);
