@@ -124,27 +124,42 @@ function saveImage() {
         savedImageBox.appendChild(savedImage);
         savedImagesContainer.appendChild(savedImageBox);
 
-        // Increment the saved image count and the count in the current line
+        // // Increment the saved image count and the count in the current line
+        // savedImageCount++;
+        // savedImagesInCurrentLine++;
+
+        let captionElement = document.getElementById('hover-caption');
+        
+        if (!captionElement) {
+          captionElement = document.createElement('div');
+          captionElement.id = 'hover-caption';
+          captionElement.classList.add('hover-caption');
+          document.body.appendChild(captionElement);
+          
+          // Set the initial position to the bottom left corner
+          captionElement.style.position = 'fixed';
+          captionElement.style.left = '10px';  // Adjust the left position as needed
+          captionElement.style.bottom = '10px';  // Adjust the bottom position as needed
+    
+        }
+    
+         // Show caption on mouseover
+        savedImageBox.addEventListener('mouseover', function (event) {
+          captionElement.textContent = randomCaption;
+          captionElement.style.position = 'fixed'; // Use 'fixed' to position relative to the viewport
+          captionElement.style.left = `${event.clientX}px`;
+          captionElement.style.top = `${event.clientY}px`;
+        });
+        
+        // Remove the caption on mouseout
+        savedImageBox.addEventListener('mouseout', function () {
+          captionElement.textContent = ''; // Clear text
+          captionElement.style.left = '-9999px'; // Move off-screen
+          captionElement.style.top = '-9999px';
+        });
+    
         savedImageCount++;
         savedImagesInCurrentLine++;
 
-        // ...
-
-        let captionElement = document.getElementById('hover-caption');
-
-        if (!captionElement) {
-            captionElement = document.createElement('div');
-            captionElement.id = 'hover-caption';
-            captionElement.classList.add('hover-caption');
-            document.body.appendChild(captionElement);
-        
-            // Set the initial position to the bottom left corner
-            captionElement.style.position = 'fixed';
-            captionElement.style.left = '10px'; // Adjust the left position as needed
-            captionElement.style.bottom = '10px'; // Adjust the bottom position as needed
-        } else {
-            // If the element already exists, set the content to an empty string
-            captionElement.textContent = '';
-        }
-    }
+  }
 }
