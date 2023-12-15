@@ -5,7 +5,7 @@ window.addEventListener('load', function () {
         randomImageElement.alt = ''; // Set alt attribute to an empty string
 
         // Hide the image icon by setting the src to an empty string
-        randomImageElement.src = '';
+        randomImageElement.src = 'hello';
 
         // Hide the black dot (caption) by setting initial style
         const captionElement = document.getElementById('hover-caption');
