@@ -125,13 +125,14 @@ function saveImage() {
             captionElement.id = 'hover-caption';
             captionElement.classList.add('hover-caption');
             document.body.appendChild(captionElement);
-
+        
             // Set the initial position to the bottom left corner
             captionElement.style.position = 'fixed';
             captionElement.style.left = '10px'; // Adjust the left position as needed
             captionElement.style.bottom = '10px'; // Adjust the bottom position as needed
+        } else {
+            // If the element already exists, set the content to an empty string
+            captionElement.textContent = '';
         }
-
-        // Show caption on mouseover
-        savedImageBox.addEventListener('mouseover', function (event) {
-            captionElement.textContent = randomCaption
+    }
+}
