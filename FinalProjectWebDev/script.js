@@ -13,15 +13,15 @@ function showConfirmation() {
 
       if (savedImages.length > 0) {
         // Display a confirmation dialog
-        const confirmation = confirm("The collection will not be saved. Do you want to continue?");
+        const confirmation = confirm("Oh No! Your collection will not be saved! Do you want to continue?");
 
         // If the user clicks "OK", navigate to the link
         if (confirmation) {
-          window.location.href = "your-link-url"; // Replace "your-link-url" with the actual URL
+          window.location.href = "https://www.sonnyangel.com/en/"; 
         }
       } else {
         // No saved images, no need for confirmation
-        window.location.href = "your-link-url"; // Replace "your-link-url" with the actual URL
+        window.location.href = "https://www.sonnyangel.com/en/"; 
       }
     }
 
